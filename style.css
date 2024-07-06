@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background: url(img/background.png) repeat-x 0% 100% / cover;
+    animation: back 8s linear infinite;
+}
+
+@keyframes back {
+    to {
+        background-position-x: -100vw;
+    }
+}
+
+.select-animal {
+    width: 800px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    grid-gap: 10px;
+}
+
+.animal-item {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed white;
+    cursor: pointer;
+}
+
+.animal-item:hover {
+    filter: drop-shadow(0 0 3px white) brightness(1.4)
+}
+
+.animal-item:nth-child(2) {
+    background: url(img/donkey.gif);
+}
+
+.animal-item:nth-child(3) {
+    background: url(img/horse.png);
+}
+
+.animal-item:nth-child(4) {
+    background: url(img/monkey.gif);
+}
+
+.animal-item:nth-child(5) {
+    background: url(img/sheep.gif);
+}
+
+.animal-item:nth-child(6) {
+    background: url(img/tiger.gif);
+}
+
+.animal-item:nth-child(7) {
+    background: url(img/zeebra.gif);
+}
+
+.select {
+    position: absolute;
+    right: -95px;
+    width: 150px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    backdrop-filter: blur(10px);
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    color: white;
+    font-size: 17px
+}
+
+.animal {
+    width: 200px;
+    height: 150px;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    left: 40px
+}
+
+.jumping {
+    animation: jump 1s ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        top: 475px;
+    }
+    50% {
+        top: 275px;
+    }
+    60% {
+        top: 275px;
+    }
+    100% {
+        top: 475px;
+    }
+}
+
+
+
+
+
+
+
